@@ -1,0 +1,4 @@
+include/mypkg.svh
+include/alu.sv
+include/instr_memory.sv
+include/regfile.sv

@@ -1,0 +1,2 @@
+include/mypkg.svh
+src/data_memory.sv
