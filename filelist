@@ -1,4 +1,9 @@
 include/mypkg.svh
-include/alu.sv
-include/instr_memory.sv
-include/regfile.sv
+src/immgen.sv
+src/data_memory.sv
+src/instr_memory.sv
+src/alu.sv
+src/regfile.sv
+src/mux2x1
+src/mux3x1
+
