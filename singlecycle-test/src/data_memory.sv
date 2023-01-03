@@ -9,7 +9,7 @@ module data_memory #(
   input  logic [31:0]       pwdata_i ,
   input  logic [3:0]        pstrb_i  ,
   output logic [31:0]       prdata_o ,
-  //output logic              pready_o ,
+  output logic              pready_o ,
 
   /* verilator lint_off UNUSED */
   input  logic              clk_i   ,
@@ -23,14 +23,14 @@ module data_memory #(
   /* verilator lint_on UNUSED */
 
   logic [3:0][7:0] dmem [0:2**(DMEM_W-2)-1];
-  // initial begin
-  //   $readmemh("./memory/inst_mem.mem", mem);
-  // end
-  initial begin
-    for (int i=0; i < 2**(DMEM_W-2); i++) begin
-      dmem[i] = 0;
-    end
-  end
+  //initial begin
+  //   $readmemh("./memory/inst_mem.mem", dmem);
+  //  end
+  //initial begin
+  //  for (int i=0; i < 2**(DMEM_W-2); i++) begin
+  //    dmem[i] = 0;
+  //  end
+  //end
 
   // Read - Write
   always_ff @(posedge clk_i) begin : proc_data
@@ -50,10 +50,10 @@ module data_memory #(
         dmem[paddr_i[DMEM_W-1:2]][3] <= pwdata_i[31:24];
       end
     end
-    //$writememh("./memory/data_mem.mem", dmem);
+    $writememh("./memory/data_mem.mem", dmem);
   end
 
   assign prdata_o = dmem[paddr_i[DMEM_W-1:2]];
-  //assign pready_o = 1'b1;
+  assign pready_o = 1'b1;
 
 endmodule : data_memory
