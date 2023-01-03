@@ -1,0 +1,142 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Tue Jan  3 03:20:04 2023
+[*]
+[dumpfile] "/home/thule/RISC-V/singlecycle-test/wave.fst"
+[dumpfile_mtime] "Mon Jan  2 07:16:48 2023"
+[dumpfile_size] 28756
+[savefile] "/home/thule/RISC-V/singlecycle-test/wave.gtkw"
+[timestart] 994
+[size] 1261 673
+[pos] -109 -41
+*-4.354198 890 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.top.
+[treeopen] TOP.top.singleCycle.
+[treeopen] TOP.top.singleCycle.BRC_block.
+[sst_width] 276
+[signals_width] 242
+[sst_expanded] 1
+[sst_vpaned_height] 159
+@22
+TOP.top.singleCycle.alu_block.alu_add[31:0]
+TOP.top.singleCycle.alu_block.alu_and[31:0]
+TOP.top.singleCycle.alu_block.alu_data_o[31:0]
+TOP.top.singleCycle.alu_block.alu_lui[31:0]
+@100000028
+TOP.top.singleCycle.alu_block.alu_op_i[3:0]
+@22
+TOP.top.singleCycle.alu_block.alu_or[31:0]
+TOP.top.singleCycle.alu_block.alu_sll[31:0]
+TOP.top.singleCycle.alu_block.alu_slt[31:0]
+TOP.top.singleCycle.alu_block.alu_sltu[31:0]
+TOP.top.singleCycle.alu_block.alu_sra[31:0]
+TOP.top.singleCycle.alu_block.alu_srl[31:0]
+TOP.top.singleCycle.alu_block.alu_sub[31:0]
+TOP.top.singleCycle.alu_block.alu_xor[31:0]
+@28
+TOP.top.singleCycle.alu_block.bru_exp_o
+@22
+TOP.top.singleCycle.alu_block.data_tmp1[63:0]
+TOP.top.singleCycle.alu_block.data_tmp2[63:0]
+TOP.top.singleCycle.alu_block.operand_a_i[31:0]
+TOP.top.singleCycle.alu_block.operand_b_i[31:0]
+TOP.top.singleCycle.alu_block.shift[4:0]
+TOP.top.singleCycle.alu_block.tmp[31:0]
+@420
+TOP.top.singleCycle.imem_block.IMEM_W
+@28
+TOP.top.singleCycle.imem_block.clk_i
+@22
+TOP.top.singleCycle.imem_block.paddr_i[13:0]
+TOP.top.singleCycle.imem_block.prdata_o[31:0]
+@28
+TOP.top.singleCycle.imem_block.rst_ni
+TOP.top.singleCycle.imem_block.unused
+@22
+TOP.top.singleCycle.lsu_block.addr_i[31:0]
+@28
+TOP.top.singleCycle.lsu_block.clk_i
+@22
+TOP.top.singleCycle.lsu_block.dataout_1[31:0]
+TOP.top.singleCycle.lsu_block.dataout_2[31:0]
+TOP.top.singleCycle.lsu_block.dataout_3[31:0]
+TOP.top.singleCycle.lsu_block.input_peri[31:0]
+TOP.top.singleCycle.lsu_block.io_hex0_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex1_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex2_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex3_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex4_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex5_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex6_o[31:0]
+TOP.top.singleCycle.lsu_block.io_hex7_o[31:0]
+TOP.top.singleCycle.lsu_block.io_lcd_o[31:0]
+TOP.top.singleCycle.lsu_block.io_ledg_o[31:0]
+TOP.top.singleCycle.lsu_block.io_ledr_o[31:0]
+TOP.top.singleCycle.lsu_block.io_sw_i[31:0]
+TOP.top.singleCycle.lsu_block.addr_i[31:0]
+TOP.top.singleCycle.lsu_block.st_data_i[31:0]
+TOP.top.singleCycle.lsu_block.ld_data_o[31:0]
+TOP.top.singleCycle.lsu_block.mask[3:0]
+@28
+TOP.top.singleCycle.lsu_block.rst_ni
+TOP.top.singleCycle.lsu_block.sel_mod[2:0]
+@22
+TOP.top.singleCycle.lsu_block.st_data_i[31:0]
+@28
+TOP.top.singleCycle.lsu_block.st_en_i
+@22
+TOP.top.singleCycle.lsu_block.temp_ld_data[31:0]
+@420
+TOP.top.singleCycle.regfile_block.ADDR_WIDTH
+TOP.top.singleCycle.regfile_block.DATA_WIDTH
+@28
+TOP.top.singleCycle.regfile_block.clk_i
+@22
+TOP.top.singleCycle.regfile_block.mem[0][31:0]
+TOP.top.singleCycle.regfile_block.mem[1][31:0]
+TOP.top.singleCycle.regfile_block.mem[2][31:0]
+TOP.top.singleCycle.regfile_block.mem[3][31:0]
+TOP.top.singleCycle.regfile_block.mem[4][31:0]
+TOP.top.singleCycle.regfile_block.mem[5][31:0]
+TOP.top.singleCycle.regfile_block.mem[6][31:0]
+TOP.top.singleCycle.regfile_block.mem[7][31:0]
+TOP.top.singleCycle.regfile_block.mem[8][31:0]
+TOP.top.singleCycle.regfile_block.mem[9][31:0]
+TOP.top.singleCycle.regfile_block.mem[10][31:0]
+TOP.top.singleCycle.regfile_block.mem[11][31:0]
+TOP.top.singleCycle.regfile_block.mem[12][31:0]
+@23
+TOP.top.singleCycle.regfile_block.mem[13][31:0]
+@22
+TOP.top.singleCycle.regfile_block.mem[14][31:0]
+TOP.top.singleCycle.regfile_block.mem[15][31:0]
+TOP.top.singleCycle.regfile_block.mem[16][31:0]
+TOP.top.singleCycle.regfile_block.mem[17][31:0]
+TOP.top.singleCycle.regfile_block.mem[18][31:0]
+TOP.top.singleCycle.regfile_block.mem[19][31:0]
+TOP.top.singleCycle.regfile_block.mem[20][31:0]
+TOP.top.singleCycle.regfile_block.mem[21][31:0]
+TOP.top.singleCycle.regfile_block.mem[22][31:0]
+TOP.top.singleCycle.regfile_block.mem[23][31:0]
+TOP.top.singleCycle.regfile_block.mem[24][31:0]
+TOP.top.singleCycle.regfile_block.mem[25][31:0]
+TOP.top.singleCycle.regfile_block.mem[26][31:0]
+TOP.top.singleCycle.regfile_block.mem[27][31:0]
+TOP.top.singleCycle.regfile_block.mem[28][31:0]
+TOP.top.singleCycle.regfile_block.mem[29][31:0]
+TOP.top.singleCycle.regfile_block.mem[30][31:0]
+TOP.top.singleCycle.regfile_block.mem[31][31:0]
+TOP.top.singleCycle.regfile_block.rd_addr_i[4:0]
+TOP.top.singleCycle.regfile_block.rd_data_i[31:0]
+@28
+TOP.top.singleCycle.regfile_block.rd_wren_i
+@22
+TOP.top.singleCycle.regfile_block.rs1_addr_i[4:0]
+TOP.top.singleCycle.regfile_block.rs1_data_o[31:0]
+TOP.top.singleCycle.regfile_block.rs2_addr_i[4:0]
+TOP.top.singleCycle.regfile_block.rs2_data_o[31:0]
+@28
+TOP.top.singleCycle.regfile_block.rst_ni
+[pattern_trace] 1
+[pattern_trace] 0

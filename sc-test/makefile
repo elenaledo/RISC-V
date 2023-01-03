@@ -1,5 +1,5 @@
 #*******************************************************************************
-# Creator:        Hai Cao Xuan (cxhai.sdh221@hcmut.edu.vn)
+# Creator:        Hai Cao Xuan (caoxuanhaipr@gmail.com)
 # Description:    makefile
 #*******************************************************************************
 # Copyright (c) 2022 Hai Cao Xuan
@@ -29,41 +29,36 @@ VERILATOR_FLAGS += --trace-fst
 VERILATOR_FLAGS += --build -j
 
 # Input files for Verilator
-VERILATOR_INPUT = $(FILES) top.sv --top-module top
+VERILATOR_INPUT = $(FILES) ./bin/top.sv --top-module top
+
+.PHONY: all
+all:
+	make test
 
 .PHONY: help
 help:
 	@echo -e "make [option]"
-	@echo -e "\tlint    run lint checks for syntax and violations"
 	@echo -e "\tbuild   verilate and build modules"
-	@echo -e "\tsim     run simulation"
+	@echo -e "\ttest    run simulation"
 	@echo -e "\twave    open waveforms"
 	@echo -e "\tclean   clean the working folder"
 	@echo -e "\thelp    print this help"
 
-.PHONY: lint
-lint:
-	@echo "------------------> LINT CHECK <------------------"
-	@$(VERILATOR) $(LINT_FLAGS) $(FILES)
-
 .PHONY: build
 build: ./obj_dir/Vtop
-./obj_dir/Vtop: $(FILES) test/driver.cpp top.sv
-	@echo "-------------------> BUILD <----------------------"
-	@$(VERILATOR) $(VERILATOR_FLAGS) $(VERILATOR_INPUT) --exe test/tb_top.cpp
+./obj_dir/Vtop: $(FILES) ./bin/tb_top.cpp ./bin/top.sv
+	@$(VERILATOR) $(VERILATOR_FLAGS) $(VERILATOR_INPUT) --exe ./bin/tb_top.cpp > build.log
 
-.PHONY: sim
-sim: ./obj_dir/Vtop
-	@echo "-----------------> SIMULATING <-------------------"
+.PHONY: test
+test: ./obj_dir/Vtop
 	@./obj_dir/Vtop
 
 .PHONY: wave
 wave: wave.fst
-	@echo "-----------------> WAVEFORMS <--------------------"
 	@gtkwave wave.fst wave.gtkw
 
 .PHONY: clean
 clean:
 	@rm -rf obj_dir
-	@rm -f *.fst
-	@echo "-----------------> ALL CLEAN <--------------------"
+	@rm -f wave.fs*
+	@rm -f *.log

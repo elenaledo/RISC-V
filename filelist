@@ -4,6 +4,10 @@ src/data_memory.sv
 src/instr_memory.sv
 src/alu.sv
 src/regfile.sv
-src/mux2x1
-src/mux3x1
-
+src/mux2x1.sv
+src/mux3x1.sv
+src/PC.sv
+src/ctrl_unit.sv
+src/lsu.sv
+src/mux4to1.sv
+src/brcomp.sv
