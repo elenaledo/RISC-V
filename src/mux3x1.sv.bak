@@ -1,4 +1,4 @@
-module mux3x1 #(
+module mux3x1#(
 localparam int width=32)(
 input logic   [width-1:0] op1,op2,op3,
 input logic [1:0] opcode,

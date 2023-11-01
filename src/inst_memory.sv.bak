@@ -20,7 +20,7 @@ module inst_memory #(
 
 
   initial begin
-   // $readmemh("./memory/instmem.data.sim", imem);
+    $readmemh("./memory/instmem.data.sim", imem);
   end
 
 

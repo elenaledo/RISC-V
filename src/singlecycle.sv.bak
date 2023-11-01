@@ -7,7 +7,6 @@ import mypkg::*;
 (
 
     input   logic   [31:0]  io_sw_i  ,
-	 output  logic				 pc_debug_o,
     output  logic   [31:0]  io_lcd_o ,
     output  logic   [31:0]  io_ledg_o,
     output  logic   [31:0]  io_ledr_o,
@@ -34,7 +33,7 @@ import mypkg::*;
   //alu_op_e   alu_op;     
     logic           mem_wren;   
     logic   [1:0]   wb_sel;
-	 alu_op_e     alu_op;		
+	  logic   [3:0]   alu_op;		
     
     logic   [31:0]  pc;
     logic   [31:0]  imm;
@@ -48,7 +47,7 @@ import mypkg::*;
     logic   [31:0]  wb_data;
     
     
-   assign pc_debug_o = pc; 
+    
     
 ctrl_unit ctr_unit_block
 (   

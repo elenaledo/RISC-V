@@ -5,7 +5,7 @@ import mypkg::*;
 ( 
   //input logic clk_i,
   input logic [31:0] operand_a_i , operand_b_i ,
-  input alu_op_e    alu_op_i,
+  alu_op_e    alu_op_i,
   output logic [31:0] alu_data_o , 
   output logic bru_exp_o
 );
@@ -44,36 +44,35 @@ always_comb
 begin 
   case(alu_op_i)
     A_ADD: 
-       alu_data_o = alu_add;
+      assign alu_data_o = alu_add;
     A_SUB:
-       alu_data_o = alu_sub;
+      assign alu_data_o = alu_sub;
     A_SLT:
       if(tmp)
-      alu_data_o = operand_a_i[31];
+      assign alu_data_o = operand_a_i[31];
       else
-      alu_data_o = alu_sub[31];
+      assign alu_data_o = alu_sub[31];
     A_SLTU:
       if(tmp)
-        alu_data_o = operand_b_i[31];
+        assign alu_data_o = operand_b_i[31];
       else 
-        alu_data_o = alu_sub[31];
+        assign alu_data_o = alu_sub[31];
     A_XOR:
-      alu_data_o = alu_xor;
+      assign alu_data_o = alu_xor;
     A_OR:
-      alu_data_o = alu_or;
+      assign alu_data_o = alu_or;
     A_AND:
-      alu_data_o = alu_and;
+      assign alu_data_o = alu_and;
     A_SLL:
-      alu_data_o = alu_sll;
+      assign alu_data_o = alu_sll;
     A_SRL:
-      alu_data_o = alu_srl;
+      assign alu_data_o = alu_srl;
     A_SRA:
-      alu_data_o = alu_sra;
+      assign alu_data_o = alu_sra;
     A_LUI:
-       alu_data_o = alu_lui;
+      assign alu_data_o = alu_lui;
     default: alu_data_o = 32'b0;
   endcase
-      bru_exp_o = |(alu_data_o);
 end
-
+    assign bru_exp_o = |alu_data_o;
   endmodule 

@@ -83,7 +83,7 @@ module ctrl_unit
 /*verilator lint_off LATCH*/
 // operation 
    
-    always_latch begin 
+    always_comb begin 
         case(instr_i[6:2])
             OP: begin
                 case(instr_i[14:12])
